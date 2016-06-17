@@ -33,5 +33,5 @@ public interface EmployeeController {
 
     List<Employee> findEmployeeByFirstAndSecondName(String firstName, String secondName);
 
-    Employee findEmployeeById(int id);
+    Employee findEmployeeById(int employeeId);
 }

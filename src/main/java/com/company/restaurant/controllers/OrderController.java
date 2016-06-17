@@ -14,7 +14,7 @@ public interface OrderController {
 
     void delOrder(OrderView orderView);
 
-    OrderView findOrderById(int id);
+    OrderView findOrderById(int orderId);
 
     OrderView closeOrder(OrderView orderView);
 
