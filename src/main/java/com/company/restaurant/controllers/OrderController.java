@@ -26,11 +26,7 @@ public interface OrderController {
 
     List<OrderView> findAllClosedOrders();
 
-    String addCourseToOrder(OrderView orderView, Course course, int quantity);
-
     String addCourseToOrder(OrderView orderView, Course course);
-
-    String takeCourseFromOrder(OrderView orderView, Course course, int quantity);
 
     String takeCourseFromOrder(OrderView orderView, Course course);
 
