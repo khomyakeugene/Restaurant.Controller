@@ -1,7 +1,6 @@
 package com.company.restaurant.controllers;
 
 import com.company.restaurant.model.Course;
-import com.company.restaurant.model.OrderCourseView;
 import com.company.restaurant.model.OrderView;
 
 import java.util.List;
@@ -26,15 +25,15 @@ public interface OrderController {
 
     List<OrderView> findAllClosedOrders();
 
+    List<OrderView> findOrderByNumber(String orderNumber);
+
     String addCourseToOrder(OrderView orderView, Course course);
 
     String takeCourseFromOrder(OrderView orderView, Course course);
 
-    List<OrderCourseView> findAllOrderCourses(OrderView orderView);
+    List<Course> findAllOrderCourses(OrderView orderView);
 
-    List<OrderView> findOrderByNumber(String orderNumber);
-
-    OrderCourseView findOrderCourseByCourseId(OrderView orderView, int courseId);
+    Course findOrderCourseByCourseId(OrderView orderView, int courseId);
 
     OrderView updOrderState(OrderView orderView, String stateType);
 }
