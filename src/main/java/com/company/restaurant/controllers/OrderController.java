@@ -1,7 +1,7 @@
 package com.company.restaurant.controllers;
 
 import com.company.restaurant.model.Course;
-import com.company.restaurant.model.OrderView;
+import com.company.restaurant.model.Order;
 
 import java.util.List;
 
@@ -9,31 +9,31 @@ import java.util.List;
  * Created by Yevhen on 17.06.2016.
  */
 public interface OrderController {
-    OrderView addOrder(OrderView orderView);
+    Order addOrder(Order order);
 
-    void delOrder(OrderView orderView);
+    void delOrder(Order order);
 
-    OrderView findOrderById(int orderId);
+    Order findOrderById(int orderId);
 
-    OrderView closeOrder(OrderView orderView);
+    Order closeOrder(Order order);
 
-    List<OrderView> findAllOrders();
+    List<Order> findAllOrders();
 
-    List<OrderView> findAllOrders(String stateType);
+    List<Order> findAllOrders(String stateType);
 
-    List<OrderView> findAllOpenOrders();
+    List<Order> findAllOpenOrders();
 
-    List<OrderView> findAllClosedOrders();
+    List<Order> findAllClosedOrders();
 
-    List<OrderView> findOrderByNumber(String orderNumber);
+    List<Order> findOrderByNumber(String orderNumber);
 
-    String addCourseToOrder(OrderView orderView, Course course);
+    String addCourseToOrder(Order order, Course course);
 
-    String takeCourseFromOrder(OrderView orderView, Course course);
+    String takeCourseFromOrder(Order order, Course course);
 
-    List<Course> findAllOrderCourses(OrderView orderView);
+    List<Course> findAllOrderCourses(Order order);
 
-    Course findOrderCourseByCourseId(OrderView orderView, int courseId);
+    Course findOrderCourseByCourseId(Order order, int courseId);
 
-    OrderView updOrderState(OrderView orderView, String stateType);
+    Order updOrderState(Order order, String stateType);
 }
