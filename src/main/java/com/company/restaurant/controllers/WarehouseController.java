@@ -2,7 +2,7 @@ package com.company.restaurant.controllers;
 
 import com.company.restaurant.model.Ingredient;
 import com.company.restaurant.model.Portion;
-import com.company.restaurant.model.WarehouseView;
+import com.company.restaurant.model.Warehouse;
 
 import java.util.List;
 
@@ -14,13 +14,13 @@ public interface WarehouseController {
 
     void takeIngredientFromWarehouse(Ingredient ingredient, Portion portion, float amount);
 
-    List<WarehouseView> findIngredientInWarehouseByName(String name);
+    List<Warehouse> findIngredientInWarehouseByName(String name);
 
-    List<WarehouseView> findIngredientInWarehouseById(int ingredientId);
+    List<Warehouse> findIngredientInWarehouseById(int ingredientId);
 
-    List<WarehouseView> findAllWarehouseIngredients();
+    List<Warehouse> findAllWarehouseIngredients();
 
-    List<WarehouseView> findAllElapsingWarehouseIngredients(float limit);
+    List<Warehouse> findAllElapsingWarehouseIngredients(float limit);
 
     List<Ingredient> findAllIngredients();
 
