@@ -5,6 +5,7 @@ import com.company.restaurant.model.JobPosition;
 import com.company.restaurant.model.Order;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Yevhen on 17.06.2016.
@@ -36,7 +37,7 @@ public interface EmployeeController {
 
     Employee findEmployeeById(int employeeId);
 
-    List<Order> getEmployeeOrders(int employeeId);
+    Set<Order> getEmployeeOrders(int employeeId);
 
-    List<Order> getEmployeeCookedCourses(int employeeId);
+    Set<Order> getEmployeeCookedCourses(int employeeId);
 }
