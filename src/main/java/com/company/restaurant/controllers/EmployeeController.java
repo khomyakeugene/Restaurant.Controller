@@ -1,5 +1,6 @@
 package com.company.restaurant.controllers;
 
+import com.company.restaurant.model.CookedCourse;
 import com.company.restaurant.model.Employee;
 import com.company.restaurant.model.JobPosition;
 import com.company.restaurant.model.Order;
@@ -39,5 +40,5 @@ public interface EmployeeController {
 
     Set<Order> getEmployeeOrders(int employeeId);
 
-    Set<Order> getEmployeeCookedCourses(int employeeId);
+    Set<CookedCourse> getEmployeeCookedCourses(int employeeId);
 }
