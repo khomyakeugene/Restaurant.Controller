@@ -2,6 +2,7 @@ package com.company.restaurant.controllers;
 
 import com.company.restaurant.model.Employee;
 import com.company.restaurant.model.JobPosition;
+import com.company.restaurant.model.Order;
 
 import java.util.List;
 
@@ -34,4 +35,8 @@ public interface EmployeeController {
     List<Employee> findEmployeeByFirstAndSecondName(String firstName, String secondName);
 
     Employee findEmployeeById(int employeeId);
+
+    List<Order> getEmployeeOrders(int employeeId);
+
+    List<Order> getEmployeeCookedCourses(int employeeId);
 }
