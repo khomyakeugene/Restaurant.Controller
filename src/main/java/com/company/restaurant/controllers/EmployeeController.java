@@ -38,7 +38,7 @@ public interface EmployeeController {
 
     Employee findEmployeeById(int employeeId);
 
-    Set<Order> getEmployeeOrders(int employeeId);
+    Set<Order> getEmployeeOrders(Employee employee);
 
-    Set<CookedCourse> getEmployeeCookedCourses(int employeeId);
+    Set<CookedCourse> getEmployeeCookedCourses(Employee employee);
 }
